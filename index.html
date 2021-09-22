@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- CSS local -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container-sm bg-dark fondo" id="formulario">
+        <div class="font-urbanist text-white text-center">
+            <h1 id="titulo">Formulario</h1>
+        </div>
+        <!--- Datos personales -->
+        <form class="row g-3 needs-validation" id="datos-personales" novalidate>
+            <div class="font-urbanist text-white bg-gris" style="padding: 60px;">
+                <p>Datos personales</p>
+                <div class="container-flex flex-row">
+                    <div class="row mb-4">
+                        <div class="col-md-8 mt-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" pattern="[A-Za-z].{0,}" required>
+                        </div>
+                        <div class="col-md-4 mt-3">
+                            <label for="rut" class="form-label">Rut</label>
+                            <input type="text" class="form-control" id="rut" placeholder="123456789-0" pattern="[0-9, k, K, -].{9,}" maxlength="10" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="ejemplo@email.com" maxlength="150" required>
+                </div>
+                <div class="col-md-2 mt-3">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="telefono" placeholder="987654321" required>
+                </div>
+            </div>
+            <div class="separacion bg-dark"></div>
+            <div class="font-urbanist text-white bg-gris" style="padding: 60px;">
+                <!-- Datos de formulario -->
+                <p>Preguntas</p>
+                <!-- Checklist -->
+                <label class="mb-3"> Seleccionar uno o más lenguajes de programación de un interés: </label>
+                <div class="error">Seleccione almenos 1</div>
+                <div class="container-ms">
+                    <div class="form-check">
+                        <input class="form-check-input check1" type="checkbox" value="" id="check1">
+                        <label class="form-check-label check1" for="check1">
+                            Python
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input check1" type="checkbox" value="" id="check1">
+                        <label class="form-check-label check1" for="check1">
+                            TypeScript
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            C++
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            C#
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            PHP
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            RUBY on Rails
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            Java
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            R
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            Groovy
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            Go
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            Swift
+                        </label>
+                    </div>
+                    <div class="form-check mb-5">
+                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                        <label class="form-check-label" for="check1">
+                            Kotlin
+                        </label>
+                    </div>
+                </div>
+                <!-- Radio -->
+                <label class="mb-2"> ¿Cuál es su nivel de experiencia en programación? </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="check2">
+                    <label class="form-check-label" for="check2">
+                        Alto
+                    </label>
+                </div>
+                <div class="form-check mb">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="check2">
+                    <label class="form-check-label" for="check2">
+                        Medio
+                    </label>
+                </div>
+                <div class="form-check mb-5">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="check2">
+                    <label class="form-check-label" for="check2">
+                        Bajo
+                    </label>
+                </div>
+                <!-- Radio -->
+                <label class="mb-2"> Nivel de conocimiento sobre los siguientes lenguajes de programación </label>
+                <div class="flex-container mb-4">
+                    <div class="row" style="margin-left: 2px;">
+                        <h4>Python</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check3">
+                            <label class="form-check-label" for="check3">
+                                Alto
+                            </label>
+                        </div>
+                        <div class="form-check mb">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check3">
+                            <label class="form-check-label" for="check3">
+                                Medio
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check3">
+                            <label class="form-check-label" for="check3">
+                                Bajo
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 2px;">
+                        <h4>Java</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check4">
+                            <label class="form-check-label" for="check4">
+                                Alto
+                            </label>
+                        </div>
+                        <div class="form-check mb">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check4">
+                            <label class="form-check-label" for="check4">
+                                Medio
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check4">
+                            <label class="form-check-label" for="check4">
+                                Bajo
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 2px;">
+                        <h4>C++</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check5">
+                            <label class="form-check-label" for="check5">
+                                Alto
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check5">
+                            <label class="form-check-label" for="check5">
+                                Medio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="check5">
+                            <label class="form-check-label" for="check5">
+                                Bajo
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--Checklist + campo abierto-->
+                <label class="mb-2">Seleccione cuál de los siguientes cursos les ha tomado mayor dificultad.</label>
+                <div class="container-ms mb-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check6">
+                        <label class="form-check-label" for="check6">
+                            Estructura de datos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check6">
+                        <label class="form-check-label" for="check6">
+                            Inteligencia Artificial
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check6">
+                        <label class="form-check-label" for="check6">
+                            Interaccion Humano-Computador
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check6">
+                        <label class="form-check-label" for="check6">
+                            Sistemas Operativos
+                        </label>
+                    </div>
+                    <input class="form-check-input" type="checkbox" value="" id="check6">
+                    <label class="form-check-label" for="check6">
+                        Otro
+                        <input class="form-control" type="text">
+                    </label>
+                    <!-- text area-->
+                </div>
+                    <label class="mb-2">Queremos conocer su opinión acerca de la escuela</label>
+                    <div class="mb-5">
+                        <textarea class="form-control" id="opinion" rows="3" required></textarea>
+                    </div>
+                <!-- Botones -->
+                <button type="submit" class="btn btn-primary" style="margin-right: 10px;">Enviar</button>
+                <button type="button" class="btn btn-primary bg-opacblue txt-white">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- scripts js-->
+    <script src="js/imprimir.js"></script>
+    <script data-main="js/verificacion.js" src="js/require-jquery.js" async></script>
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
