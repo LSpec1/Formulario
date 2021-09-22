@@ -1,0 +1,24 @@
+.fondo {
+    padding: 50px;
+}
+
+form#datos-personales {
+    padding: 20px;
+    p {
+        font-size: 27px;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container h4 {
+    margin-left: -10px;
+}
+
+.separacion {
+    width: 100px;
+    height: 50px;
+}

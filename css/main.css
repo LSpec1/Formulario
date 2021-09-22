@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
+.bg-gris {
+  background-color: #01a1a7;
+}
+
+.bg-opacblue {
+  background-color: #2f41e0b7;
+}
+
+.txt-white {
+  color: white;
+}
+
+.fondo {
+  padding: 50px;
+}
+
+form#datos-personales {
+  padding: 20px;
+}
+
+form#datos-personales p {
+  font-size: 27px;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-container h4 {
+  margin-left: -10px;
+}
+
+.separacion {
+  width: 100px;
+  height: 50px;
+}
+
+.font-urbanist {
+  font-family: 'Urbanist', sans-serif;
+}
+
+h1#titulo {
+  font-size: 50px;
+  padding: 30px;
+  padding-top: 0px;
+}
+
+.error {
+  color: #ca2800;
+  font-size: 15px;
+  display: none;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+/*# sourceMappingURL=main.css.map */
