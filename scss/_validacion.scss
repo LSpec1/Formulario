@@ -4,3 +4,14 @@
     display: none;
     text-decoration-line: underline;
 }
+
+.custom-control-input.is-valid~.custom-control-label, .was-validated .custom-control-input:valid~.custom-control-label {
+    color: #495C83 !important;
+}
+.custom-control-input.is-valid:checked~.custom-control-label::before, .was-validated .custom-control-input:valid:checked~.custom-control-label::before {
+    border-color: #495C83 !important;
+    background-color: #495C83 !important;
+}
+.custom-control-input.is-valid~.custom-control-label::before, .was-validated .custom-control-input:valid~.custom-control-label::before {
+    border-color: #495C83 !important;
+}

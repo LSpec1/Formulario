@@ -3,16 +3,13 @@ import jquery=require('jquery');
 const $:JQueryStatic=jquery;
 
 //verificar checkbox
-$(document).ready(function(){
-  $(".check1").click(function(){
-    var n = $( "input:checked" ).length;
-    if($("input:checkbox").filter(":checked").length > 1){
-      $(".error").show();
-    } else {
-      $(".error").hide();
-    }
-  })
-});
+function validarCheckBox(box:string) {
+  var casillas = document.getElementById(box)?.children;
+  var i = 0;
+  var almenos_uno = false;
+  //recorrido dentro de los hijos de box
+  
+}
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
