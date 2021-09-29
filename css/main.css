@@ -53,8 +53,28 @@ h1#titulo {
 .error {
   color: #ca2800;
   font-size: 15px;
-  display: none;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.activo {
+  display: show;
+}
+
+.desactivado {
+  display: none;
+}
+
+.custom-control-input.is-valid ~ .custom-control-label, .was-validated .custom-control-input:valid ~ .custom-control-label {
+  color: #495C83 !important;
+}
+
+.custom-control-input.is-valid:checked ~ .custom-control-label::before, .was-validated .custom-control-input:valid:checked ~ .custom-control-label::before {
+  border-color: #495C83 !important;
+  background-color: #495C83 !important;
+}
+
+.custom-control-input.is-valid ~ .custom-control-label::before, .was-validated .custom-control-input:valid ~ .custom-control-label::before {
+  border-color: #495C83 !important;
 }
 /*# sourceMappingURL=main.css.map */
