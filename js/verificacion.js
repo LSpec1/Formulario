@@ -53,6 +53,18 @@ define(["require", "exports", "jquery"], function (require, exports, jquery) {
         }
         return salida;
     }
+    function enviarFormulario() {
+        //eliminar todo el body menos el titulo
+        var formulario = document.getElementById("datos-personales");
+        if (formulario) {
+            formulario.style.display = "none";
+        }
+        //cambiar titulo
+        var titulo = document.getElementById("titulo");
+        if (titulo) {
+            titulo.innerHTML = 'Datos enviados !';
+        }
+    }
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
         'use strict';
@@ -62,35 +74,53 @@ define(["require", "exports", "jquery"], function (require, exports, jquery) {
         Array.prototype.slice.call(forms)
             .forEach(function (form) {
             form.addEventListener('submit', function (event) {
+                var criterio = 0;
                 //Validacion de cajas de texto
                 if (!form.checkValidity()) {
                     event.preventDefault();
                     event.stopPropagation();
                 }
+                else
+                    criterio++;
                 //Validaciones propias
                 if (!validar('.ck1', 'error1')) {
                     event.preventDefault();
                     event.stopPropagation();
                 }
+                else
+                    criterio++;
                 if (!validar('.ck2', 'error2')) {
                     event.preventDefault();
                     event.stopPropagation();
                 }
+                else
+                    criterio++;
                 if (!validar('.ck3', 'error3')) {
                     event.preventDefault();
                     event.stopPropagation();
                 }
+                else
+                    criterio++;
                 if (!validar('.ck4', 'error4')) {
                     event.preventDefault();
                     event.stopPropagation();
                 }
+                else
+                    criterio++;
                 if (!validar('.ck5', 'error5')) {
                     event.preventDefault();
                     event.stopPropagation();
                 }
+                else
+                    criterio++;
                 if (!validar('.ck6', 'error6')) {
                     event.preventDefault();
                     event.stopPropagation();
+                }
+                else
+                    criterio++;
+                if (criterio == 7) {
+                    enviarFormulario();
                 }
                 form.classList.add('was-validated');
             }, false);

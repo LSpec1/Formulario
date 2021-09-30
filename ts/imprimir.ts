@@ -12,3 +12,6 @@ formulario.addEventListener("submit", function(event:any){
 });
 
 //imprimir checkboxes
+formulario.addEventListener("submit", function(event:any){
+  
+});

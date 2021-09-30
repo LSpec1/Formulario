@@ -12,3 +12,5 @@ formulario.addEventListener("submit", function (event) {
     console.log(telefono.value);
 });
 //imprimir checkboxes
+formulario.addEventListener("submit", function (event) {
+});
