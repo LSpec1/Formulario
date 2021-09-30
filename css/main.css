@@ -53,16 +53,9 @@ h1#titulo {
 .error {
   color: #ca2800;
   font-size: 15px;
+  display: none;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-
-.activo {
-  display: show;
-}
-
-.desactivado {
-  display: none;
 }
 
 .custom-control-input.is-valid ~ .custom-control-label, .was-validated .custom-control-input:valid ~ .custom-control-label {

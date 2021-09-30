@@ -2,7 +2,7 @@ import jquery=require('jquery');
 
 const $:JQueryStatic=jquery;
 
-//verificar checkbox
+//verificar checkbox1
 function validarCheckBox1() {
   var casilla1:any = document.getElementById('check1');
   var casilla2:any = document.getElementById('check2');
@@ -45,19 +45,37 @@ function validarCheckBox1() {
   } else {
       alMenos_uno = false;
   }
+  //mensaje de advertencia
+  var salida:boolean;
+  const mensaje:any = document.getElementById('error1');
   if (alMenos_uno) {
-      const mensaje:any = document.getElementById('.error1');
-      mensaje.classList.add('activo');
-      return true;
+      mensaje.style.display = 'none';
+      salida = true;
   }
   else {
-    const mensaje:any = document.querySelector('.error1');
-    mensaje.classList.add('desactivado');
-    return false;
+    console.log("No se ha seleccionado un checkbox !");
+    mensaje.style.display = 'block';
+    salida = false;
   }
-
+  return salida;
 }
 
+//verificar radio
+function validarRadio1(){
+  var casilla13:any = document.getElementById('check13');
+  var casilla14:any = document.getElementById('check14');
+  var casilla15:any = document.getElementById('check15');
+  var alMenos_uno:boolean = false;
+  if (casilla13.checked) {
+    alMenos_uno = true;
+  } else if (casilla14.checked) {
+    alMenos_uno = true;
+  } else if (casilla15.checked) {
+    alMenos_uno = true;
+  } else {
+    alMenos_uno = false;
+  }
+}
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
@@ -70,8 +88,7 @@ function validarCheckBox1() {
     .forEach(function (form) {
       form.addEventListener('submit', function (event:any) {
         // Checklist
-        validarCheckBox1();
-        if (!form.checkValidity()) {
+        if (!form.checkValidity() || !validarCheckBox1()) {
           event.preventDefault()
           event.stopPropagation()
         }
